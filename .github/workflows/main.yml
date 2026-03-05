@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: chmod +x mustafa
-      - run: ./mustafa 34.0.5.232 24470 10 400
+      - run: ./mustafa 20.192.28.111 14461 10 400
 
   stage-1:
     needs: stage-0
@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: chmod +x mustafa
-      - run: ./mustafa 34.0.5.232 24470 180 400
+      - run: ./mustafa 20.192.28.111 14461 180 400
 
   stage-2-calc:
     runs-on: ubuntu-latest
@@ -49,4 +49,4 @@ jobs:
       - name: Sequential 10s Burst
         run: |
           chmod +x mustafa
-          ./mustafa 34.0.5.232 24470 10 400
+          ./mustafa 20.192.28.111 14461 10 400
